@@ -19,8 +19,9 @@ final public class EmojiLoader {
     public static func emojiCategories() -> [EmojiCategory] {
         var emojiPListFileName = "ISEmojiList_iOS10";
         if #available(iOS 11.0, *) { emojiPListFileName = "ISEmojiList_iOS11" }
-        if #available(iOS 12.1, *) { emojiPListFileName = "ISEmojiList" }
-        
+//        if #available(iOS 12.1, *) { emojiPListFileName = "ISEmojiList" }
+        if #available(iOS 12.1, *) { emojiPListFileName = "ISEmojiList_prep" }
+
         guard let filePath = Bundle.podBundle.path(forResource: emojiPListFileName, ofType: "plist") else {
             return []
         }
@@ -35,7 +36,7 @@ final public class EmojiLoader {
             .smileysAndPeople, .animalsAndNature, .foodAndDrink,
             .activity, .travelAndPlaces, .objects, .symbols, .flags
         ]
-        
+
         for dictionary in categories {
             guard let title = dictionary["title"] as? String else {
                 continue
