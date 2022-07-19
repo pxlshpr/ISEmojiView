@@ -193,7 +193,7 @@ extension EmojiView: PageControlBottomViewDelegate {
     
 }
 
-// MARK: - CategoriesBottomViewDelegate
+// MARK: - CategoriesBottomViewDelegate Kareem
 
 extension EmojiView: CategoriesBottomViewDelegate {
     
